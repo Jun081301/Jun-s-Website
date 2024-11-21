@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* JohnDoe Landing page
+* Junseok Landing page
 =========================================================
 
 * Copyright: 2019 DevCRUD (https://devcrud.com)
