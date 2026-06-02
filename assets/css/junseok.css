@@ -11512,8 +11512,8 @@ pre .code {
   position: relative;
   height: 80vh;
   min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/background.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11687,4 +11687,233 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+
+
+/* Header content center alignment */
+.header .header-content {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.header .header-title,
+.header .header-subtitle,
+.header .header-mono {
+    text-align: center;
+}
+
+.header .header-content .btn {
+  display: inline-block;
+}
+
+.header .btn-rounded {
+    margin-top: 25px;
+}
+
+
+/* =========================
+   Header content move upward
+========================= */
+.header {
+    position: relative;
+}
+
+.header .header-content {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    z-index: 2;
+}
+
+.header .header-title,
+.header .header-subtitle,
+.header .header-mono {
+    text-align: center;
+}
+
+.header .btn {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/* =========================
+   Remove circular center photo
+   and replace with clean text brand
+========================= */
+.navbar-center-brand {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.navbar-center-brand .brand-title {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #444;
+}
+
+.navbar-center-brand .brand-subtitle {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* if old brand style still affects layout */
+.navbar .brand {
+    display: none !important;
+}
+
+/* responsive adjustment */
+@media (max-width: 991px) {
+    .header .header-content {
+        top: 40%;
+        padding: 0 20px;
+    }
+
+    .navbar-center-brand {
+        display: none;
+    }
+}
+
+
+/* =========================
+   Elegant Section Dividers
+========================= */
+
+/* Gives each main section better spacing */
+.about-section,
+.section {
+    position: relative;
+}
+
+/* Divider line before major white sections */
+#experience::before,
+#service::before,
+#projects::before {
+    content: "";
+    display: block;
+    width: 82%;
+    max-width: 1100px;
+    height: 1px;
+    margin: 0 auto 70px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(248, 92, 112, 0.35),
+        rgba(0, 0, 0, 0.12),
+        rgba(248, 92, 112, 0.35),
+        transparent
+    );
+}
+
+/* About section bottom divider */
+.about-section::after {
+    content: "";
+    display: block;
+    width: 82%;
+    max-width: 1100px;
+    height: 1px;
+    margin: 65px auto 0 auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(248, 92, 112, 0.35),
+        rgba(0, 0, 0, 0.12),
+        rgba(248, 92, 112, 0.35),
+        transparent
+    );
+}
+
+/* Dark values section divider style */
+.section.bg-dark {
+    position: relative;
+    margin-top: 20px;
+}
+
+.section.bg-dark::before {
+    content: "";
+    display: block;
+    width: 82%;
+    max-width: 1100px;
+    height: 1px;
+    margin: 0 auto 55px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        rgba(248, 92, 112, 0.45),
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+}
+
+/* Contact section top divider */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 82%;
+    max-width: 1100px;
+    height: 1px;
+    z-index: 5;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(248, 92, 112, 0.45),
+        rgba(255, 255, 255, 0.45),
+        rgba(248, 92, 112, 0.45),
+        transparent
+    );
+}
+
+/* Small title accent improvement */
+.section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin-top: 14px;
+    background-color: #F85C70;
+    border-radius: 50px;
+}
+
+/* Prevent divider from feeling too tight on mobile */
+@media (max-width: 768px) {
+    #experience::before,
+    #service::before,
+    #projects::before,
+    .about-section::after,
+    .section.bg-dark::before,
+    #contact::before {
+        width: 88%;
+    }
+
+    #experience::before,
+    #service::before,
+    #projects::before {
+        margin-bottom: 45px;
+    }
+}
+
+/* Replace header background image */
+.header {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("../imgs/background.jpg") no-repeat center center !important;
+    background-size: cover !important;
 }
