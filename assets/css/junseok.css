@@ -11917,3 +11917,49 @@ pre .code {
                 url("../imgs/background.jpg") no-repeat center center !important;
     background-size: cover !important;
 }
+
+/* =========================
+   About Section Font Size
+========================= */
+
+/* About section main titles */
+.about-card h3 {
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+/* About section subtitles */
+.about-card h5 {
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+/* About paragraph text */
+.about-card p {
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+/* Personal Information text */
+.about-card .info li {
+    font-size: 1.08rem;
+    line-height: 2;
+}
+
+/* Top Skills titles */
+.about-card h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Top Skills descriptions */
+.about-card .subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Download Resume button size */
+.about-card .btn {
+    font-size: 1.05rem;
+    padding: 0.65rem 1.25rem;
+}
